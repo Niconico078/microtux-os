@@ -1,0 +1,42 @@
+/* Thèmes et Fond */
+body { margin: 0; font-family: 'Segoe UI', sans-serif; overflow: hidden; height: 100vh; transition: background 0.5s; }
+.orange-mode { background: #e67e22; }
+.dark-mode { background: #2c3e50; }
+
+/* Écran ESU Bleu */
+.esu-full-screen { position: fixed; inset: 0; background: #004a92; color: white; z-index: 9999; display: flex; align-items: center; justify-content: center; text-align: center; }
+.btn-orange { background: #d35400; color: white; border: none; padding: 12px 24px; cursor: pointer; font-weight: bold; border-radius: 4px; }
+
+/* Fenêtres Aero Glass Style */
+.window { position: absolute; background: rgba(255, 255, 255, 0.9); border: 1px solid #777; display: none; box-shadow: 0 10px 30px rgba(0,0,0,0.5); z-index: 10; }
+.window-header { background: linear-gradient(to bottom, #cedff6, #95b6e0); padding: 5px 10px; display: flex; justify-content: space-between; font-weight: bold; color: #1e395b; }
+
+/* Bureau et Icônes */
+.desktop-icons { position: absolute; top: 20px; left: 20px; display: flex; flex-direction: column; gap: 20px; }
+.icon { text-align: center; color: white; cursor: pointer; width: 70px; text-shadow: 1px 1px 2px black; font-size: 35px; }
+.icon span { font-size: 12px; display: block; margin-top: 5px; }
+
+/* Panneau de Configuration */
+.cp-window { width: 650px; top: 10%; left: 10%; }
+.cp-body { padding: 20px; color: #333; }
+.cp-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+.cp-item { display: flex; gap: 10px; cursor: pointer; padding: 5px; border-radius: 4px; }
+.cp-item:hover { background: #e8f2fe; }
+.cp-item h3 { margin: 0; font-size: 14px; color: #003399; }
+.cp-item p { margin: 0; font-size: 11px; }
+
+/* Store Style 2010 */
+.store-window { width: 700px; height: 450px; top: 15%; left: 15%; }
+.store-container { display: flex; height: calc(100% - 30px); }
+.store-sidebar { width: 180px; background: #e3cfc3; border-right: 1px solid #bcaf9f; padding: 10px; }
+.sidebar-item { font-weight: bold; color: #5e3522; margin-bottom: 10px; }
+.featured-banner { background: #d35400; color: white; padding: 10px; font-weight: bold; margin: 15px 0; border-radius: 4px; }
+
+/* Barre des tâches */
+#taskbar { position: fixed; bottom: 0; width: 100%; height: 40px; background: rgba(0,0,0,0.85); display: flex; align-items: center; color: white; }
+.start-btn { width: 50px; height: 100%; background: #d35400; display: flex; align-items: center; justify-content: center; font-weight: bold; cursor: pointer; }
+.taskbar-right { margin-left: auto; display: flex; gap: 15px; padding-right: 15px; }
+
+/* Animations clignotement ESU */
+@keyframes blink { 50% { opacity: 0; } }
+.esu-alert-active { animation: blink 1s infinite; color: #ff9f43; font-weight: bold; }

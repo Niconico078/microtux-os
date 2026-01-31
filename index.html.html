@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microtux Vivaldi 4 Plus - ESU 2028</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="orange-mode">
+
+    <div id="esu-fullscreen-alert" class="esu-full-screen">
+        <div class="esu-full-content">
+            <h1>Fin du support Microtux Vivaldi 4 Plus</h1>
+            <p>Le support standard de 15 ans est arrivé à échéance.</p>
+            <p><strong>État : Protection ESU active jusqu'en 2028.</strong></p>
+            <button class="btn-orange" onclick="closeESU()">Accéder au bureau</button>
+        </div>
+    </div>
+
+    <div id="desktop">
+        <div class="desktop-icons">
+            <div class="icon" onclick="openApp('microtux-store')">🌐<span>Store</span></div>
+            <div class="icon" onclick="openApp('control-panel')">⚙️<span>Paramètres</span></div>
+        </div>
+
+        <div id="control-panel" class="window cp-window">
+            <div class="window-header aero">
+                <span>Panneau de configuration</span>
+                <button onclick="closeApp('control-panel')">X</button>
+            </div>
+            <div class="cp-body">
+                <div class="cp-grid">
+                    <div class="cp-item" onclick="alert('ESU 2028 : Votre système est sécurisé.')">
+                        🛡️ <div><h3>Système et sécurité</h3><p>État et ESU 2028</p></div>
+                    </div>
+                    <div class="cp-item">
+                        🌐 <div><h3>Réseau et Internet</h3><p>Gestion du réseau</p></div>
+                    </div>
+                    <div class="cp-item" onclick="openApp('media-player')">
+                        🔊 <div><h3>Matériel et audio</h3><p>Ouvrir le Media Player</p></div>
+                    </div>
+                    <div class="cp-item">
+                        📦 <div><h3>Programmes</h3><p>Désinstaller un programme</p></div>
+                    </div>
+                    <div class="cp-item">
+                        👤 <div><h3>Comptes utilisateurs</h3><p>Gérer l'administrateur</p></div>
+                    </div>
+                    <div class="cp-item" onclick="openApp('look-changer')">
+                        🎨 <div><h3>Apparence</h3><p>Modifier le thème Harmony</p></div>
+                    </div>
+                    <div class="cp-item">
+                        🕒 <div><h3>Horloge et région</h3><p>Modifier la langue</p></div>
+                    </div>
+                    <div class="cp-item">
+                        ♿ <div><h3>Ergonomie</h3><p>Optimiser l'affichage</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="microtux-store" class="window store-window">
+            <div class="window-header aero"><span>Microtux Software Center</span><button onclick="closeApp('microtux-store')">X</button></div>
+            <div class="store-container">
+                <div class="store-sidebar">
+                    <div class="sidebar-item active">📦 Get Software</div>
+                    <div class="sidebar-sub-item">🍊 Microtux Apps</div>
+                </div>
+                <div class="store-main">
+                    <input type="text" id="store-search" placeholder="Rechercher (ex: Vivaldi)..." onkeyup="searchApps()">
+                    <div class="featured-banner">Featured Applications ></div>
+                    <div id="store-content">
+                        <h2 class="dept-title">Departments</h2>
+                        <div class="store-grid-apps">
+                            <div class="app-item">🛠️<br>Accessories</div>
+                            <div class="app-item">🎮<br>Games</div>
+                            <div class="app-item">🌐<br>Internet</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="look-changer" class="window look-window">
+            <div class="window-header aero"><span>Microtux Look Changer</span><button onclick="closeApp('look-changer')">X</button></div>
+            <div class="look-content">
+                <h2>Choisir l'apparence :</h2>
+                <div class="look-grid">
+                    <div class="look-option">
+                        <div class="preview p-orange"></div>
+                        <button onclick="setTheme('orange')">Microtux Orange</button>
+                    </div>
+                    <div class="look-option">
+                        <div class="preview p-dark"></div>
+                        <button onclick="setTheme('dark')">Microtux Dark</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="media-player" class="window media-window">
+            <div class="window-header aero"><span>Media Player</span><button onclick="closeApp('media-player')">X</button></div>
+            <div class="media-content">
+                <div class="album-art">🎵</div>
+                <h3>Tobu - Colors</h3>
+                <div class="controls">
+                    <button onclick="playAudio()">▶ Play</button>
+                    <button onclick="pauseAudio()">⏸ Pause</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="taskbar">
+            <div class="start-btn" onclick="openApp('control-panel')">V</div>
+            <div class="taskbar-right">
+                <div id="notification-area" onclick="openApp('esu-fullscreen-alert')">
+                    <span id="esu-notif" style="display:none;">🔔 ESU 2028</span>
+                </div>
+                <div id="clock">00:00</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
